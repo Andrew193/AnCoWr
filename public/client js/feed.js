@@ -28,6 +28,3 @@ function AppendItems(data) {
     document.querySelector(".CommentsPlace").appendChild(data)
     document.querySelector(".Loader").classList.remove("Loader")
 }
-window.onload=()=>{
-    GetComments()
-}

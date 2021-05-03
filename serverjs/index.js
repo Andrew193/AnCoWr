@@ -31,4 +31,10 @@ App.post("/addComment",(req,response)=>{
     then((res,error)=>response.json({"done":true}))
 
 })
+App.post("/addQuestion",(req,response)=>{
+    console.log(Object.values(req.body));
+    Connection.query("insert into question(feed,name,message) values(?,?,?)",Object.values(req.body)).
+    then((res,error)=>response.json({"done":true}))
+
+})
 App.listen(process.env.PORT||5000,"localhost",()=>{console.log("was");})
