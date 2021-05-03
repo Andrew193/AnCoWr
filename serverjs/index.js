@@ -39,6 +39,11 @@ App.post("/addComment",(req,response)=>{
 App.post("/addQuestion",(req,response)=>{
     Connection.query("insert into question(feed,name,message) values(?,?,?)",Object.values(req.body)).
     then((res,error)=>response.json({"done":true}))
-
+})
+App.post("/reg",(req,response)=>{
+    Connection.query(`select * from rooms where number=${req.body.number}`).then((res,error)=>{
+        Connection.query(`insert into people(number, type, floor, price, phone, person) values(?,?,?,?,?,?)`,
+        [res[0][0].number,res[0][0].type,+res[0][0].floor,res[0][0].price,res[0][0].phone,req.body.name])
+    })
 })
 App.listen(process.env.PORT||5000,"localhost",()=>{console.log("was");})
