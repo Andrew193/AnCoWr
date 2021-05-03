@@ -1,0 +1,70 @@
+.AddCommentForm{
+    padding: 10px 15%;
+    background: #e8ecef;
+}
+.AddCommentForm div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+.AddCommentForm input,textarea{
+    width: 80%;
+    outline: none;
+    background-color: #f9f9f9;
+    border: 1px solid #f1f1f1;
+    border-radius: 0;
+    padding: 10px 20px;
+    color: #878787;
+}
+.AddCommentForm label{
+    position: relative;
+}
+.AddCommentForm label::after{
+    position: absolute;
+    content: "*";
+    color: red;
+    display: block;
+    top: 0;
+    right: -10px;
+}
+.commentsItem{
+    background-color: rgb(255 248 230);
+    border: 1px solid #583a3f !important;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    min-height: 120px;
+    background-image: url("/public/img/blockquote-1.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    border-radius: 5px;
+}
+.commentsItem h2{
+    position: absolute;
+    font-size: 23px;
+    top: 35%;
+    right: 2%;
+    font-weight: bold;
+}
+.commentsItem h4{
+    font-size: 14px;
+    line-height: 27px;
+    position: absolute;
+    top: 65%;
+    right: 2%;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+}
+.commentsItem p{
+    text-align: left;
+    font-size: 18px;
+    padding: 5px 15px;
+}
+.commentsItem:nth-child(2n){
+    color: #d9b589;
+    background-color: #583a3f;
+    background-image: url("/public/img/blockquote-2.png");
+}

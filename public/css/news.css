@@ -3,8 +3,10 @@
     display: flex;
     flex-wrap: wrap;
     background-image: url("../img/bg6.png");
+    background-size: contain!important;
 }
 .newsItem{
+    flex-basis: 0;
     flex-grow: 1;
     background: #583a3f;
     margin: 5px;
@@ -23,4 +25,10 @@
     top: 5%;
     right: 1%;
     color: rgb(230, 34, 34);
+}
+@media (max-width:450px){
+    .newsItem{
+        flex-basis: unset;
+        min-width: unset;
+    }
 }

@@ -2,8 +2,6 @@ function GetNews(limit=3) {
     fetch("http://localhost:5000/getNews").then((response)=>response.json()).then((result)=>makeNews(result))
 }
 function makeNews(data) {
-    console.log("was");
-    console.log(data);
     let wrap=document.createDocumentFragment();
     data.data.forEach((value)=>{
         const item=document.createElement("div")
@@ -17,6 +15,7 @@ function makeNews(data) {
 }
 function AppendItems(data) {
     document.querySelector(".NewsPlace").appendChild(data)
+    document.querySelector(".Loader").classList.remove("Loader")
 }
 window.onload=()=>{
     GetNews()

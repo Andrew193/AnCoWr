@@ -5,18 +5,31 @@
 }
 
 html {
-    height: auto!important;
+    height: 100%;
 }
 
 body {
     top: 0px !important;
     text-align: center;
 }
+.Loader{
+    position: absolute;
+    z-index: 9999;
+    background-image: url(/public/img/loader.gif);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: gray;
+    opacity: 0.95;
+    top: 0;
+    left: 0;
+}
 .PageLogoBlock{
     background-position: center!important;
-    background-size: cover!important;
+    background-size: contain!important;
     width: 100%;
-    height: 450px;
+    background-image: url("/public/img/bg5.png")
 }
 /* Убираем отступ который выставляет скрипт */
 
@@ -29,6 +42,7 @@ body {
 .Container {
     background-color: white;
     color: black;
+    height: 100%;
 }
 
 .item2 {
@@ -53,7 +67,13 @@ body {
     color: white!important;
 }
 .ColorMode .newsItem:nth-child(2n){
-    background-color:black;
+    background-color:transparent;
+}
+.ColorMode .AddCommentForm{
+    background-color: #2a3131;
+}
+.ColorMode .commentsItem{
+    background-color:transparent;
 }
 
 .ColorMode .item {
@@ -95,7 +115,7 @@ body {
 }
 
 .MainContent section {
-    padding: 10px 15%;
+    padding: 2.5% 10%;
 }
 
 .MainContent section[class="f"] {
@@ -124,17 +144,18 @@ body {
 
 .MainContent section[class="f4"] aside {
     border: 5px solid rgba(193, 155, 118, 0.15);
-    margin: 10% 0;
+    margin: 5% 0;
     display: flex;
     flex-wrap: wrap;
 }
 
 .MainContent section[class="f4"] aside>div {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
 }
 
 .tipShower {
@@ -149,6 +170,8 @@ button {
     color: #d9b589 !important;
     background-color: transparent;
     cursor: pointer;
+    flex-grow: 1;
+    flex-basis: 0;
 }
 
 button:hover {
