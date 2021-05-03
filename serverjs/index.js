@@ -25,6 +25,11 @@ App.get("/getComment",(req,response)=>{
         response.json({"data":res[0]});
     })
 })
+App.get("/getRooms",(req,response)=>{
+    Connection.query("select * from rooms").then((res,error)=>{
+        response.json({"data":res[0]});
+    })
+})
 //post
 App.post("/addComment",(req,response)=>{
     Connection.query("insert into comments(name,message,date) values(?,?,?)",Object.values(req.body)).
@@ -32,7 +37,6 @@ App.post("/addComment",(req,response)=>{
 
 })
 App.post("/addQuestion",(req,response)=>{
-    console.log(Object.values(req.body));
     Connection.query("insert into question(feed,name,message) values(?,?,?)",Object.values(req.body)).
     then((res,error)=>response.json({"done":true}))
 

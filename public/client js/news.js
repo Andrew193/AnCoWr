@@ -17,6 +17,3 @@ function AppendItems(data) {
     document.querySelector(".NewsPlace").appendChild(data)
     document.querySelector(".Loader").classList.remove("Loader")
 }
-window.onload=()=>{
-    GetNews()
-}

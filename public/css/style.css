@@ -238,7 +238,7 @@ a {
 
 @media (min-width:1750px){
     .Container {
-        font-size: 26px;
+        font-size: 26px!important;
     }
     button{
         font-size: 26px;
@@ -252,7 +252,7 @@ a {
 }
 @media (max-width:1750px){
     .Container {
-        font-size: 22px;
+        font-size: 22px!important;
     }
     button{
         font-size: 22px;
@@ -266,7 +266,7 @@ a {
 }
 @media (max-width:1550px){
     .Container {
-        font-size: 20px;
+        font-size: 20px!important;
     }
     button{
         font-size: 16px;
@@ -290,7 +290,7 @@ a {
 }
 @media (max-width:1150px){
     .Container {
-        font-size: 12px;
+        font-size: 12px!important;
     }
     button{
         font-size: 12px;
@@ -310,18 +310,8 @@ a {
     }
 }
 @media (max-width:768px){
-    .Container {
-        font-size: 12px;
-    }
-    button{
-        font-size: 12px;
-        padding: 5px 10px;
-    }
     h3{
         font-size: 16px;
-    }
-    .tipShower .item h4 {
-        font-size: 22px;
     }
     .Navbar{
         justify-content: center;
@@ -335,7 +325,13 @@ a {
         display: none;
     }
     .Container {
-        font-size: 9px;
+        font-size: 9px!important;
+    }
+    h2{
+        font-size: 9px!important;
+    }
+    p{
+        font-size: 9px!important;
     }
     button{
         font-size: 10px;
